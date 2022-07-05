@@ -1,0 +1,31 @@
+.header {
+    background: transparent;
+    width: 100%;
+    padding: 40px 0 37px;
+    display: flex;
+    justify-content: center;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    
+
+    .nav {
+        @include tablets {
+            display: none;
+        }
+    }
+}
+
+.header__fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    background-color: #0E0E0E;
+    
+}

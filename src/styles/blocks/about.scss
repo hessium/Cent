@@ -1,0 +1,223 @@
+.about {
+    margin-bottom: 200px;
+   
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 44%;
+        @include tablets {
+            
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 36px;
+        font-family: 'FontName', sans-serif;
+
+        @include phones {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__desc {
+        font-size: 20px;
+        line-height: 24px;
+        padding-right: 4px;
+        margin-bottom: 84px;
+        
+        @include tablets {   
+            margin-bottom: 40px;
+        }
+
+        @include phones {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__links {
+        width: 100%;
+        padding-left: 15px;
+
+        @include tablets {
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between
+        }
+    }
+
+    .link {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'FontName', sans-serif;
+        margin-right: 57px;
+  
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @include phones {
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        position: absolute;
+        padding: 75px 0 355px 135px;
+        top: -11000px;  
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100vw;
+        width: 100%;
+        height: 1000px;
+        background-color: #0E0E0E;
+        z-index: 10000;
+
+        @include desktops {
+            padding: 75px 0 150px 45px;
+           
+        }
+
+        @include tablets {
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px 150px 45px;
+        }
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        padding: 0 51px 0 0;
+        border-right: 1px solid #BFBFBF;
+        margin-right: 51px;
+        height: 100%;
+        min-width: 25%;
+        background-color: #0E0E0E;
+        
+        @include desktops {
+            justify-content: space-between;
+            height: 70%;
+        }
+
+        @include tablets {
+            flex-direction: row;          
+            justify-content: space-between;
+            border-right:none;
+            border-bottom: 1px solid #BFBFBF;
+            min-width: none;
+            padding: 50px 0 50px 0;
+            margin-right: 0;
+            height: 100%;
+
+            &--bot {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-bottom: none;
+
+                .about__item {
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+
+                    @include phones {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            border-right:none;    
+        }        
+    }
+
+    &__item {
+        font-family: 'FontName'; 
+        margin-bottom: 190px;
+
+
+        @include desktops {
+            margin-bottom: 100px;
+        }
+
+        @include tablets {
+            margin-bottom: 0;
+            width: 35%;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+
+        &--title {
+            color: #BFBFBF;
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 60px;
+
+            @include desktops {
+                font-size: 24px;
+                line-height: 38px;
+                margin-bottom: 40px;
+            }
+
+            @include phones {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+
+        }
+
+        &--number{
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 8px;
+
+            @include desktops {
+                font-size: 24px;
+                line-height: 38px;
+                margin-bottom: 4px;   
+            }                      
+        }
+
+        &--desc {
+            font-size: 12px;       
+        }
+
+        &--margin {
+            margin-bottom: 160px;
+            
+        @include desktops {
+            margin-bottom: 70px;
+        }
+
+        @include tablets {
+            margin-bottom: 0;
+        }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.form {
+    
+
+  
+    &__block {
+        width: 100%;       
+        margin-right: 14px;
+        display: flex;
+        &--top{
+            display: flex;
+        }
+
+        &--textarea{
+            margin-right: 0;
+        }
+
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include phones {
+            margin-bottom: 10px;
+            margin-right: 0;
+            width: 242px;
+        }
+       
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--textarea{
+           position: relative;
+        }
+
+        @include phones {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input{
+        padding: 16px;
+        font-size: 12px;
+        width: 242px;
+        background:#0024DC;
+        color: #FFFFFF;
+        border: 1px solid #0024DC;
+
+        &--textarea {
+            width: 100%;
+            height: 171px;
+            resize: none;
+
+            @include phones {
+                height: 138px;
+            }
+        }
+
+        &:focus{
+            border: 1px solid #0024DC;  
+        }
+
+        &:focus-visible {
+            outline: #001CAD;
+            border-radius: 2px;
+        }
+        
+    }
+
+    &__button {
+        background-color: transparent;
+        min-width: 126px;
+        height: 126px;
+        bottom: -35px;
+        right: -68px;
+        border: none;
+        position: absolute;
+        z-index: 1;
+
+        @include tablets {
+            right: -12px;
+        }
+       
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #FFFFFF;  
+            border-radius: 50%;
+            z-index: 10;
+          }
+
+        &--block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-width: 126px;
+            height: 126px;           
+            font-size: 12px;
+            line-height: 14px;
+            color: #FFFFFF;
+            
+        }
+
+        &--hover {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-width: 126px;
+            width: 126px;
+            height: 126px;                        
+            background-color: #001CAD;          
+
+            &::after {
+                content: url('../img/quadro.svg');
+                position: absolute;
+                top: -9px;
+                left: 0;
+                width: 76px;
+                height: 94px;
+                z-index: 1;
+            }         
+        }
+
+        &--img {
+            z-index: 100;
+        }
+    }
+}
+
+.form__button:hover{
+   
+
+    .form__button--block {
+        display: none;
+    }
+    .form__button--hover {
+        display: flex;
+    }
+}
+.form__input::-webkit-input-placeholder { 
+    color: #FFFFFF;
+}
+.form__input::-moz-placeholder { 
+    color: #FFFFFF;
+}

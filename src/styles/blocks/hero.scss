@@ -1,0 +1,111 @@
+.hero {
+   margin-bottom: 200px;
+   position: relative;
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include phones {
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        margin-top: 223px;
+        margin-bottom: 253px;
+        color:$white;
+        font-size: 82px;
+        line-height: 100px;
+        font-family: 'FontName', sans-serif;
+
+        @include tablets {
+            font-size: 60px;
+            line-height: 80px;
+        }
+
+        @include phones {
+            font-size: 42px;
+            line-height: 60px;
+            margin-top: 152px;
+            margin-bottom: 380px;
+            padding-left: 28px;
+            width: 100%;  
+        }
+    }
+
+    &__block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .addres {
+        font-size: 20px;
+        line-height: 24px;
+
+        &::after{
+            content:'';
+            width: 124px;
+            height: 88px;
+            position: absolute;
+            top:0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 838px;  
+            background:  url('../../img/map.png') center center / 100% no-repeat;
+        }
+
+         &:hover::after {  
+            display: block;
+            transition: display 2s;
+            z-index: 1000;
+            width: 100%;
+            
+           
+        }
+
+        @include phones {
+            width: 45%;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    .email{
+        position: relative;
+        font-size: 20px;
+        line-height: 24px;
+
+
+        @include phones {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &::after{
+            content: url('../../img/mail.svg');
+            width: 124px;
+            height: 88px;
+            position: absolute;
+            top:1000px;
+            left: -14px;
+            opacity: 0;
+
+            
+        }
+
+         &:hover::after {  
+            top: -100px;
+            opacity: 1;
+            transition: top .5s;
+
+            @include phones {
+                opacity: 0;
+            }
+        }
+    }
+}

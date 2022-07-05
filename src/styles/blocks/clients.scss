@@ -1,0 +1,43 @@
+.clients {
+    padding: 100px 0;
+    position: relative;
+
+    &-container {
+        width: 100%;
+        overflow: hidden;
+       
+    }
+
+    &__content {  
+        width: 100%;
+        width:  3000px !important;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow: auto;
+        left: -500px;
+
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &:nth-child(2n+1) {
+            margin-left: 420px;
+        }
+
+        .item {
+            cursor: pointer;
+            margin-right: 30px;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 55px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.clients-container::-webkit-scrollbar{
+   display: none;
+}
