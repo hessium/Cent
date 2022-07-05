@@ -38,8 +38,7 @@
        flex-direction: column;
        justify-content: space-between;
         @include tablets {
-            
-            
+                
             &:nth-child(2) {
                 margin-bottom: 80px;
             }

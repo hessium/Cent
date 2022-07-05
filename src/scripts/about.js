@@ -1,14 +1,3 @@
-/* let list = $('.about__list');
-let item = $('.about__link');
-
-item.hover(
-  function() {
-    list.addClass("hover");
-  }, function() {
-    list.removeClass("hover");
-  }
-); */
-
 const link = document.querySelector('.about__link');
 const container = document.querySelector('.about__list');
 
